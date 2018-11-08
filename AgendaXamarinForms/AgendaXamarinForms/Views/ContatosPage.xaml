@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaXamarinForms.Views.ContatosPage"
+             Appearing="ContentPage_Appearing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text="Meus Contatos" Style="{DynamicResource TitleStyle}" TextColor="LightSkyBlue"></Label>
+
+        <ListView Grid.Row="1" x:Name="ContatosListView" ItemTapped="ContatosListView_ItemTapped" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}" Detail="{Binding Telefone1}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Grid.Row="2" Text="Criar Contato" Clicked="Button_Clicked"></Button>
+    </Grid>
+</ContentPage>

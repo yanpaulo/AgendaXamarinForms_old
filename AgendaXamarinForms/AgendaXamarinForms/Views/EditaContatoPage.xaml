@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaXamarinForms.Views.EditaContatoPage">
+    <StackLayout>
+        <Label Text="Nome"></Label>
+        <Entry Placeholder="Nome" Text="{Binding Nome}"></Entry>
+
+        <Label Text="Telefone 1"></Label>
+        <Entry Placeholder="Telefone 1" Text="{Binding Telefone1}"></Entry>
+
+        <Label Text="Telefone 2"></Label>
+        <Entry Placeholder="Telefone 2" Text="{Binding Telefone2}"></Entry>
+
+        <Label Text="Observação"></Label>
+        <Entry Placeholder="Observação" Text="{Binding Observacoes}"></Entry>
+
+        <Button x:Name="SalvarButton" Text="Salvar" Clicked="Button_Clicked"></Button>
+        <Button x:Name="ExcluirButton" Text="Excluir" IsVisible="False" Clicked="ExcluirButton_Clicked"></Button>
+    </StackLayout>
+</ContentPage>
